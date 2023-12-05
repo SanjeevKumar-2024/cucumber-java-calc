@@ -1,19 +1,20 @@
-#@REQ_CALC-7931
-@REQ_CALC-640
 Feature:  As a user, I can add two numbers
 
+@TEST_XRAY-32
 Scenario: simple integer addition
         Given I have entered 1 into the calculator
         And I have entered 2 into the calculator
         When I press add
         Then the result should be 3 on the screen
 
+@TEST_XRAY-33
 Scenario: negative integer addition
         Given I have entered -1 into the calculator
         And I have entered 2 into the calculator
         When I press add
         Then the result should be 1 on the screen
 
+@TEST_XRAY-34
 Scenario Outline: sum of two positive numbers
         Given I have entered <input_1> into the calculator
         And I have entered <input_2> into the calculator
